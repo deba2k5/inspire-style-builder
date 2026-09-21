@@ -20,6 +20,7 @@
 
 @theme inline {
   --font-display: "Anton", sans-serif;
+  --font-title: "Bowlby One SC", sans-serif;
   --font-ui: "Barlow Condensed", sans-serif;
   --font-graffiti: "Permanent Marker", cursive;
   --shadow-pink: 6px 6px 0 var(--shadow-accent);
@@ -157,7 +158,9 @@
 @utility section-kicker { font-family: var(--font-ui); font-size: .82rem; font-weight: 700; text-transform: uppercase; color: var(--primary); }
 @utility section-title { font-family: var(--font-display); font-size: clamp(3.4rem, 8vw, 7rem); line-height: .88; text-transform: uppercase; }
 
-.hero-title { font-size: clamp(6rem, 15vw, 13rem); text-shadow: 8px 8px 0 oklch(0.08 0.01 285 / 75%); }
+.hero-title { font-size: clamp(5.2rem, 13vw, 11.5rem); text-shadow: 8px 8px 0 oklch(0.08 0.01 285 / 75%); }
+.game-wordmark { width:max-content; max-width:100%; font-family:var(--font-title); line-height:.78; text-transform:uppercase; color:var(--foreground); -webkit-text-stroke:.055em var(--background); paint-order:stroke fill; text-shadow:.055em .055em 0 var(--background),.1em .1em 0 var(--primary),.13em .13em 0 var(--background); }
+.game-wordmark-small { font-family:var(--font-title); text-transform:uppercase; color:var(--foreground); -webkit-text-stroke:.045em var(--background); paint-order:stroke fill; text-shadow:.08em .08em 0 var(--primary); }
 .paint-text { width: max-content; filter: drop-shadow(7px 7px 0 var(--shadow-accent)); transform: rotate(-3deg); }
 .hero-shade { background: linear-gradient(90deg, oklch(0.08 0.01 285 / 96%) 0%, oklch(0.08 0.01 285 / 60%) 44%, transparent 78%), linear-gradient(0deg, var(--background), transparent 30%); }
 .scribble { position:absolute; z-index:10; font-family:var(--font-graffiti); font-size:1.45rem; line-height:1.05; color:var(--foreground); transform:rotate(-8deg); }
@@ -173,5 +176,5 @@
 .photo-collage figure{position:relative;border:9px solid var(--foreground);background:var(--foreground);box-shadow:10px 10px 0 oklch(0 0 0 / 35%)}.photo-collage figure:nth-child(1){transform:rotate(-2deg)}.photo-collage figure:nth-child(2){transform:translateY(20px) rotate(1deg)}.photo-collage figure:nth-child(3){transform:rotate(2deg)}.photo-collage img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:contrast(1.1)}.photo-collage figcaption{padding:.8rem .2rem .2rem;font-family:var(--font-graffiti);font-size:1.4rem;color:var(--background)}
 .partner-sign{border:1px solid var(--primary);padding:1.2rem 1.7rem;font-family:var(--font-display);font-size:1.1rem;color:var(--foreground);box-shadow:inset 0 0 18px oklch(0.66 0.29 355 / 15%),0 0 14px oklch(0.66 0.29 355 / 12%)}
 .final-cta{background:linear-gradient(oklch(0.08 0.01 285 / 82%),var(--background)),url("/src/assets/diversion-city-hero.jpg") center/cover}.final-cta::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,oklch(0 0 0 / 18%) 4px)}
-@media(max-width:767px){.hero{min-height:84svh}.hero-shade{background:linear-gradient(0deg,var(--background),oklch(0.08 0.01 285 / 38%) 60%,oklch(0.08 0.01 285 / 55%));}.hero-title{font-size:clamp(4.6rem,25vw,8rem)}.poster-photo{height:175px}.photo-collage figure:nth-child(n){transform:none}.stats-grid>div{border-bottom:1px solid var(--border)}}
+@media(max-width:767px){.hero{min-height:84svh}.hero-shade{background:linear-gradient(0deg,var(--background),oklch(0.08 0.01 285 / 38%) 60%,oklch(0.08 0.01 285 / 55%));}.hero-title{font-size:clamp(3.8rem,19vw,6.5rem)}.poster-photo{height:175px}.photo-collage figure:nth-child(n){transform:none}.stats-grid>div{border-bottom:1px solid var(--border)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.district,.group svg{transition:none!important}}

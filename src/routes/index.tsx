@@ -50,7 +50,7 @@ function Index() {
     <main className="overflow-hidden bg-background text-foreground">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-foreground/15 bg-background/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-[1480px] items-center justify-between px-5 lg:px-10">
-          <a href="#top" className="font-graffiti text-2xl text-foreground">DIVERSiON</a>
+          <a href="#top" className="game-wordmark-small text-xl">DIVERSiON</a>
           <nav className="hidden items-center gap-7 font-ui text-sm font-semibold uppercase md:flex" aria-label="Main navigation">
             <a className="nav-link" href="#legacy">Legacy</a><a className="nav-link" href="#missions">Missions</a>
             <a className="nav-link" href="#tracks">Tracks</a><a className="nav-link" href="#prizes">Prizes</a>
@@ -68,8 +68,8 @@ function Index() {
         <div className="relative z-10 mx-auto w-full max-w-[1480px] px-5 py-20 lg:px-24">
           <div className="max-w-4xl">
             <p className="mb-3 font-ui text-sm font-bold uppercase text-accent">Techno India University presents</p>
-            <h1 className="hero-title font-display uppercase leading-[.78]">
-              <span className="block text-foreground">Diversion</span>
+            <h1 className="hero-title uppercase leading-[.78]">
+              <span className="game-wordmark block">Diversion</span>
               <span className="paint-text block text-primary">2027</span>
             </h1>
             <p className="mt-5 rotate-[-1deg] font-graffiti text-2xl text-foreground md:text-4xl">The city is your codebase</p>
@@ -105,7 +105,7 @@ function Index() {
             </article>)}
           </div>
           <div className="mt-16 grid items-center gap-10 border-y border-foreground/15 py-12 lg:grid-cols-[.8fr_1.2fr]">
-            <div className="poster-callout"><span>DIVERSiON</span><strong>2027</strong><p>Bigger ideas. Bolder builders.<br/>A brighter tomorrow.</p></div>
+            <div className="poster-callout"><span className="game-wordmark-small">DIVERSiON</span><strong>2027</strong><p>Bigger ideas. Bolder builders.<br/>A brighter tomorrow.</p></div>
             <div><p className="font-display text-4xl uppercase md:text-6xl">Next stop:</p><p className="font-graffiti text-5xl text-primary md:text-7xl">DIVERSiON 2027</p>
               <div className="mt-8 grid gap-5 font-ui sm:grid-cols-3">
                 <div className="info-line"><CalendarDays/><span><small>Dates</small>Coming soon</span></div>
@@ -155,7 +155,7 @@ function Index() {
         ['Who can join?','Students, makers, designers, and developers ready to build bold ideas together.'],['Where is it?','DIVERSiON 2027 takes place in Kolkata, India. The exact venue will be revealed soon.'],['How much does it cost?','Registration details and participation terms will be announced with the official launch.'],['What do I need to build?','Bring your curiosity and your crew. Challenges, tracks, and submission rules arrive before the event.']
       ].map(([q,a], index)=><AccordionItem key={q} value={`question-${index}`}><AccordionTrigger className="font-display text-xl uppercase no-underline hover:text-primary hover:no-underline">{q}</AccordionTrigger><AccordionContent className="font-ui text-base text-foreground/65">{a}</AccordionContent></AccordionItem>)}</Accordion></div></section>
 
-      <section id="register" className="final-cta relative flex min-h-[70vh] items-center justify-center px-5 py-24 text-center"><div className="relative z-10"><p className="font-display text-5xl uppercase leading-none md:text-8xl">Your city.<br/>Your code.</p><p className="mt-3 font-graffiti text-4xl text-primary md:text-7xl">Your DIVERSiON.</p><p className="mx-auto mt-6 max-w-md font-ui text-foreground/65">The next chapter isn't history. You're about to write it.</p><Button asChild variant="city" size="lg" className="mt-9"><a href="mailto:hello@diversion.tech?subject=DIVERSiON%202027%20Registration">Enter the city <ArrowRight/></a></Button></div></section>
+      <section id="register" className="final-cta relative flex min-h-[70vh] items-center justify-center px-5 py-24 text-center"><div className="relative z-10"><p className="font-display text-5xl uppercase leading-none md:text-8xl">Your city.<br/>Your code.</p><p className="game-wordmark-small mx-auto mt-5 w-max max-w-full text-3xl md:text-6xl">Your DIVERSiON.</p><p className="mx-auto mt-6 max-w-md font-ui text-foreground/65">The next chapter isn't history. You're about to write it.</p><Button asChild variant="city" size="lg" className="mt-9"><a href="mailto:hello@diversion.tech?subject=DIVERSiON%202027%20Registration">Enter the city <ArrowRight/></a></Button></div></section>
       <footer className="flex flex-col items-center justify-between gap-3 border-t border-foreground/15 px-5 py-6 font-ui text-xs uppercase text-foreground/50 md:flex-row lg:px-10"><span>© 2027 DIVERSiON</span><span>Made in Kolkata. Built for everywhere.</span></footer>
     </main>
   );
