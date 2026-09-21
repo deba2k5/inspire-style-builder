@@ -1,5 +1,6 @@
 import { ExternalLink, Github, Instagram, Linkedin, Mail, MapPin, Navigation, Twitter, Youtube } from "lucide-react";
 import kolkataMap from "@/assets/kolkata-iem-map.webp";
+import { VisitorCounter } from "@/components/VisitorCounter";
 
 const PLACE = "IEM Gurukul Building, Sector V, Salt Lake, Kolkata";
 const OPEN_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(PLACE)}`;
@@ -46,6 +47,7 @@ export function SiteFooter() {
           <div>
             <a href="#top" className="game-wordmark-small text-3xl">DIVERSiON</a>
             <p className="ft-blurb">A city-sized hackathon for builders ready to create real impact. Made in Kolkata. Built for everywhere.</p>
+            <VisitorCounter />
           </div>
           <nav aria-label="Footer navigation">
             <p className="ft-head">Explore</p>
@@ -64,7 +66,7 @@ export function SiteFooter() {
         </div>
 
         <div className="ft-bottom">
-          <span>© 2027 DIVERSiON · Techno India University</span>
+          <span>© 2027 DIVERSiON · IEM ACM</span>
           <span>Same city. Bigger dreams.</span>
         </div>
       </div>

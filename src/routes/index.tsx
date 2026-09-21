@@ -54,7 +54,7 @@ function Index() {
         <span className="scribble right-note hidden lg:block">GOOD IDEAS<br/>BAD SLEEP</span>
         <div className="relative z-10 mx-auto w-full max-w-[1480px] px-5 py-20 lg:px-24">
           <div className="max-w-4xl">
-            <p className="mb-3 font-ui text-sm font-bold uppercase text-accent">Techno India University presents</p>
+            <p className="mb-3 font-ui text-sm font-bold uppercase text-accent">IEM ACM presents</p>
             <h1 className="hero-title uppercase leading-[.78]">
               <span className="game-wordmark block">Diversion</span>
               <span className="paint-text block text-primary">2027</span>

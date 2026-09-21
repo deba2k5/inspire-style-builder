@@ -8,7 +8,7 @@ export function AboutDiversion() {
       <div className="about-poster">
         <img src={palmImage} alt="" className="about-poster-img" loading="lazy" />
         <div className="about-poster-shade" />
-        <p className="about-eyebrow">Techno India University presents</p>
+        <p className="about-eyebrow">IEM ACM presents</p>
         <h3 id="about-title" className="about-title">
           <span>Diversion</span>
           <b>2K27</b>
