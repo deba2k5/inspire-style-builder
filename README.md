@@ -1,24 +1,20 @@
-# Inspire Style Builder
+# DIVERSiON 2027
 
-make the website see the inspo and make the website in this style
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/7d1d3409-0e0c-4180-8285-489fbb98e2d2).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+The city is your codebase. Website for DIVERSiON 2027, a city-sized hackathon at IEM Gurukul Building, Sector V, Kolkata.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+You need Node.js (or Bun).
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
+git clone https://github.com/deba2k5/inspire-style-builder.git
+cd inspire-style-builder
 npm i
 npm run dev
 ```
+
+## Scripts
+
+- `npm run dev` - start the dev server
+- `npm run build` - production build
+- `npm run lint` - lint the project
