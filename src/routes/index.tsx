@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, BrainCircuit, CalendarDays, Code2, Globe2, MapPin, Trophy, Users, Zap } from "lucide-react";
+import { ArrowDown, ArrowRight, BrainCircuit, CalendarDays, Code2, Globe2, Handshake, MapPin, Users } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { MissionMap } from "@/components/MissionMap";
@@ -7,10 +7,9 @@ import { FloatingNav } from "@/components/FloatingNav";
 import { DistrictCarousel } from "@/components/DistrictCarousel";
 import { AboutDiversion } from "@/components/AboutDiversion";
 import { SiteFooter } from "@/components/SiteFooter";
+import { MissionSelector } from "@/components/MissionSelector";
+import { NightGallery } from "@/components/NightGallery";
 import heroImage from "@/assets/diversion-city-hero.jpg";
-import buildersImage from "@/assets/diversion-builders.jpg";
-import stageImage from "@/assets/diversion-stage.jpg";
-import nightImage from "@/assets/diversion-night.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,14 +32,6 @@ const editions = [
   { id: "D4", year: "2025", title: "Bolder Than Ever", text: "Record energy and innovation." },
   { id: "D5", year: "2026", title: "A Stronger Tomorrow", text: "A new generation arrived." },
 ];
-
-const missions = [
-  { number: "01", title: "Build", text: "Turn an idea into something real.", icon: Code2 },
-  { number: "02", title: "Compete", text: "Take on the city's toughest challenges.", icon: Zap },
-  { number: "03", title: "Win", text: "Earn prizes, recognition, and opportunities.", icon: Trophy },
-  { number: "04", title: "Connect", text: "Meet builders, mentors, and industry.", icon: Users },
-];
-
 
 function Index() {
   return (
@@ -103,12 +94,10 @@ function Index() {
         </div>
       </section>
 
-      <section id="missions" className="border-y border-foreground/15 bg-secondary py-24">
+      <section id="missions" className="mission-zone border-y border-foreground/15 py-24">
         <div className="mx-auto max-w-[1480px] px-5 lg:px-10">
-          <p className="section-kicker">Choose your</p><h2 className="section-title">Mission</h2>
-          <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
-            {missions.map(({number,title,text,icon:Icon}) => <article key={title} className="group bg-secondary p-7 transition-colors hover:bg-card"><div className="flex items-center justify-between"><span className="font-ui text-sm text-primary">MISSION {number}</span><Icon className="text-primary"/></div><h3 className="mt-16 font-display text-5xl uppercase">{title}</h3><p className="mt-3 font-ui text-foreground/60">{text}</p><ArrowRight className="mt-8 transition-transform group-hover:translate-x-2"/></article>)}
-          </div>
+          <div className="section-heading-row"><div><p className="section-kicker">Choose your</p><h2 className="section-title">Mission</h2></div><p>Four routes. One city. Pick the move that starts your story.</p></div>
+          <MissionSelector />
         </div>
       </section>
 
@@ -124,13 +113,13 @@ function Index() {
         </div>
       </section>
 
-      <section className="road-texture py-24">
-        <div className="mx-auto max-w-[1480px] px-5 lg:px-10"><div className="text-center"><p className="section-kicker">Evidence archive</p><h2 className="section-title">The city never sleeps</h2></div>
-          <div className="photo-collage mt-14 grid gap-5 md:grid-cols-3"><figure><img src={buildersImage} alt="Builders collaborating at DIVERSiON" width={1200} height={912} loading="lazy"/><figcaption>550+ BUILDERS</figcaption></figure><figure><img src={stageImage} alt="Teams celebrating on the DIVERSiON stage" width={1200} height={912} loading="lazy"/><figcaption>100+ PROJECTS</figcaption></figure><figure><img src={nightImage} alt="The DIVERSiON community meeting in Kolkata" width={1200} height={912} loading="lazy"/><figcaption>ONE CITY</figcaption></figure></div>
+      <section className="night-section py-24">
+        <div className="mx-auto max-w-[1480px] px-5 lg:px-10"><div className="section-heading-row"><div><p className="section-kicker">Evidence archive</p><h2 className="section-title">The city never sleeps</h2></div><p>Seven frames from the streets, screens, and stages that keep DIVERSiON awake.</p></div>
+          <NightGallery />
         </div>
       </section>
 
-      <section className="border-y border-foreground/15 bg-card py-20"><div className="mx-auto max-w-[1480px] px-5 text-center lg:px-10"><p className="section-kicker">The people who built the city</p><h2 className="section-title">Partners</h2><div className="mt-10 flex flex-wrap justify-center gap-4">{['TITLE PARTNER','TECH PARTNER','COMMUNITY','PLATFORM','ECOSYSTEM'].map(x=><div key={x} className="partner-sign">{x}</div>)}</div></div></section>
+      <section className="partners-section border-y border-foreground/15 py-20"><div className="mx-auto max-w-[1480px] px-5 lg:px-10"><div className="partners-layout"><div><p className="section-kicker">The people who build the city</p><h2 className="section-title">Partners</h2><p className="partners-copy">Put your brand where the next generation is building. Support ambitious teams and be part of Kolkata's biggest maker night.</p><Button asChild variant="city" size="lg" className="mt-8"><a href="mailto:hello@diversion.tech?subject=Partner%20with%20DIVERSiON%202027">Apply now to be a partner <Handshake /></a></Button></div><div className="partner-board">{['TITLE PARTNER','TECH PARTNER','COMMUNITY','PLATFORM','ECOSYSTEM'].map((x,i)=><div key={x} className="partner-sign"><span>0{i+1}</span>{x}</div>)}</div></div></div></section>
 
       <section id="faq" className="wall-texture py-24"><div className="mx-auto grid max-w-[1180px] gap-10 px-5 md:grid-cols-[.8fr_1.2fr]"><div><p className="section-kicker">Ask the city</p><h2 className="section-title">Street questions</h2><p className="mt-5 font-graffiti text-2xl text-primary">No gatekeeping.</p></div><Accordion type="single" collapsible className="border-t border-foreground/30">{[
         ['Who can join?','Students, makers, designers, and developers ready to build bold ideas together.'],['Where is it?','DIVERSiON 2027 takes place at the IEM Gurukul Building, Sector V, Salt Lake, Kolkata. All roads lead there.'],['How much does it cost?','Registration details and participation terms will be announced with the official launch.'],['What do I need to build?','Bring your curiosity and your crew. Challenges, tracks, and submission rules arrive before the event.']

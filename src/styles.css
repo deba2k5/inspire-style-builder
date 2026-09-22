@@ -384,3 +384,98 @@ body { background-image:linear-gradient(oklch(0.13 0.075 305 / 88%),oklch(0.13 0
 .visitors-odo.loading span { opacity:.45; animation:visitors-pulse 1.2s ease-in-out infinite; }
 @keyframes visitors-pulse { 50% { opacity:.9; } }
 @media (prefers-reduced-motion:reduce) { .visitors-odo.loading span { animation:none; } }
+
+/* ---------- Requested lower-page refresh ---------- */
+.road-texture { background-image:linear-gradient(180deg, oklch(0.13 0.075 305 / 86%), oklch(0.13 0.075 305 / 94%)),url("./assets/diversion-city-rain.jpg"); background-size:cover; background-position:center; }
+.map-grid { background-image:linear-gradient(180deg, oklch(0.13 0.075 305 / 82%), oklch(0.13 0.075 305 / 94%)),url("./assets/diversion-riverside.jpg"); background-size:cover; background-position:center; }
+.wall-texture { background-image:linear-gradient(180deg, oklch(0.13 0.075 305 / 88%), oklch(0.13 0.075 305 / 96%)),url("./assets/diversion-city-rain.jpg"); background-size:cover; background-position:center; }
+body { background-attachment:scroll; }
+.section-heading-row { display:flex; align-items:end; justify-content:space-between; gap:2rem; }
+.section-heading-row > p { max-width:25rem; font-family:var(--font-ui); font-size:1.1rem; line-height:1.4; color:color-mix(in oklab,var(--foreground) 65%,transparent); }
+
+.about-poster-img { object-position:center; }
+.about-intro { overflow:hidden; padding:1.25rem 1.4rem; border:2px solid var(--foreground); background:color-mix(in oklab,var(--background) 82%,transparent); box-shadow:6px 6px 0 var(--primary); font-family:var(--font-ui); text-transform:uppercase; }
+.about-intro span,.about-intro small { display:block; font-weight:800; color:color-mix(in oklab,var(--foreground) 65%,transparent); }
+.about-intro strong { display:block; width:max-content; max-width:100%; margin:.15rem 0; overflow:hidden; white-space:nowrap; border-right:4px solid var(--accent); font-family:var(--font-title); font-size:clamp(1.65rem,4vw,3.25rem); line-height:1; color:var(--primary); animation:about-type 4.8s steps(21,end) infinite, about-caret .7s step-end infinite; }
+.about-actions { display:flex; align-items:center; gap:1rem; margin-top:.4rem; }
+.about-round-link { position:relative; width:9.5rem; height:9.5rem; flex-direction:column; gap:.5rem; border-radius:50%; padding:1rem; white-space:normal; line-height:1; text-align:center; transform:rotate(-4deg); }
+.about-round-link.secondary { width:8.5rem; height:8.5rem; transform:rotate(5deg); }
+.about-round-link svg { width:1.5rem; height:1.5rem; }
+@keyframes about-type { 0%,10% { width:0; } 45%,78% { width:21ch; } 95%,100% { width:0; } }
+@keyframes about-caret { 50% { border-color:transparent; } }
+
+.mission-zone { position:relative; isolation:isolate; background:linear-gradient(90deg, oklch(0.1 0.06 305 / 94%), oklch(0.13 0.075 305 / 76%)),url("./assets/diversion-city-rain.jpg") center/cover; }
+.mission-selector { display:grid; grid-template-columns:minmax(15rem,.52fr) minmax(0,1.48fr); gap:1.25rem; margin-top:3rem; }
+.mission-list { display:grid; grid-template-rows:repeat(4,1fr); gap:.65rem; }
+.mission-list button { display:grid; grid-template-columns:2.4rem 1fr auto; align-items:center; gap:.8rem; min-height:5rem; padding:1rem 1.2rem; border:2px solid color-mix(in oklab,var(--foreground) 28%,transparent); background:color-mix(in oklab,var(--background) 78%,transparent); color:var(--foreground); text-align:left; transition:transform .2s,background .2s,border-color .2s,box-shadow .2s; }
+.mission-list button > span { font-family:var(--font-title); color:var(--primary); }
+.mission-list button > strong { grid-column:2; grid-row:1; font-family:var(--font-title); font-size:1.7rem; text-transform:uppercase; }
+.mission-list button > svg { grid-column:3; grid-row:1; color:var(--accent); }
+.mission-list button:hover,.mission-list button:focus-visible,.mission-list button.is-active { transform:translateX(.45rem); border-color:var(--foreground); background:var(--primary); color:var(--primary-foreground); box-shadow:-6px 6px 0 var(--foreground); outline:none; }
+.mission-list button.is-active > span,.mission-list button.is-active > svg,.mission-list button:hover > span,.mission-list button:hover > svg { color:var(--primary-foreground); }
+.mission-feature { position:relative; isolation:isolate; min-height:28rem; overflow:hidden; border:4px solid var(--foreground); box-shadow:10px 10px 0 var(--primary); animation:mission-reveal .35s ease-out; }
+.mission-feature > img { position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; }
+.mission-feature-shade { position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,oklch(0.08 0.04 305 / 94%),oklch(0.08 0.04 305 / 48%) 62%,transparent),linear-gradient(0deg,oklch(0.08 0.04 305 / 70%),transparent 55%); }
+.mission-feature-copy { display:flex; min-height:28rem; max-width:37rem; flex-direction:column; justify-content:flex-end; padding:2.2rem; }
+.mission-feature-copy p { font-weight:800; text-transform:uppercase; color:var(--accent); }
+.mission-feature-copy h3 { margin-top:.25rem; font-family:var(--font-title); font-size:clamp(4rem,9vw,8rem); line-height:.8; text-transform:uppercase; text-shadow:.055em .055em 0 var(--primary); }
+.mission-feature-copy > span { margin-top:1.2rem; font-size:1.25rem; color:color-mix(in oklab,var(--foreground) 82%,transparent); }
+.mission-feature-copy a { display:inline-flex; width:max-content; align-items:center; gap:.5rem; margin-top:1.4rem; border-bottom:3px solid var(--primary); padding-bottom:.3rem; font-weight:800; text-transform:uppercase; color:var(--foreground); }
+@keyframes mission-reveal { from { opacity:0; transform:translateY(12px); } }
+
+.night-section { position:relative; background:linear-gradient(180deg,oklch(0.1 0.06 305 / 88%),oklch(0.13 0.075 305 / 96%)),url("./assets/diversion-riverside.jpg") center/cover; }
+.night-gallery { margin-top:3rem; }
+.ng-toolbar { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1.5rem; }
+.ng-toolbar > p { font-family:var(--font-ui); color:color-mix(in oklab,var(--foreground) 62%,transparent); }
+.ng-toolbar > p strong { margin-right:.25rem; font-family:var(--font-title); font-size:2rem; color:var(--foreground); text-shadow:.06em .06em 0 var(--primary); }
+.ng-toolbar > p span { margin-left:1rem; font-family:var(--font-graffiti); color:var(--accent); }
+.ng-toolbar > div { display:flex; gap:.6rem; }
+.ng-toolbar button { border-radius:50%; }
+.ng-frame { height:100%; padding:.55rem; background:var(--foreground); color:var(--background); box-shadow:8px 8px 0 color-mix(in oklab,var(--background) 70%,transparent); transform:rotate(-.7deg) scale(.96); transition:transform .45s,box-shadow .45s; }
+.ng-frame.is-current { transform:rotate(.6deg) scale(1); box-shadow:10px 10px 0 var(--primary); }
+.ng-photo { position:relative; overflow:hidden; aspect-ratio:16/10; background:var(--background); }
+.ng-photo::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 60%,oklch(0.08 0.04 305 / 42%)); pointer-events:none; }
+.ng-photo img { width:100%; height:100%; object-fit:cover; filter:contrast(1.08) saturate(1.08); transition:transform .8s; }
+.ng-frame:hover .ng-photo img { transform:scale(1.045); }
+.ng-frame figcaption { display:flex; align-items:end; justify-content:space-between; gap:1rem; min-height:5.25rem; padding:.9rem .55rem .35rem; }
+.ng-frame figcaption strong { font-family:var(--font-graffiti); font-size:clamp(1.35rem,3vw,2.1rem); text-transform:uppercase; }
+.ng-frame figcaption span { max-width:12rem; font-family:var(--font-ui); font-weight:700; text-align:right; text-transform:uppercase; color:color-mix(in oklab,var(--background) 65%,transparent); }
+.ng-dots { display:flex; justify-content:center; gap:.5rem; margin-top:2rem; }
+.ng-dots button { width:2.5rem; height:.35rem; background:color-mix(in oklab,var(--foreground) 25%,transparent); transition:width .3s,background .3s; }
+.ng-dots button.is-active { width:5rem; background:var(--primary); }
+
+.partners-section { position:relative; background:linear-gradient(100deg,oklch(0.1 0.06 305 / 94%),oklch(0.18 0.09 320 / 82%)),url("./assets/diversion-city-rain.jpg") center/cover; }
+.partners-layout { display:grid; grid-template-columns:minmax(0,.8fr) minmax(28rem,1.2fr); gap:4rem; align-items:center; }
+.partners-copy { max-width:34rem; margin-top:1.25rem; font-size:1.15rem; line-height:1.5; color:color-mix(in oklab,var(--foreground) 72%,transparent); }
+.partner-board { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; }
+.partner-sign { display:flex; min-height:7rem; align-items:end; justify-content:space-between; gap:.7rem; background:color-mix(in oklab,var(--background) 76%,transparent); backdrop-filter:blur(10px); text-align:right; transition:transform .2s,background .2s; }
+.partner-sign:first-child { grid-column:1/-1; }
+.partner-sign:hover { transform:translateY(-4px); background:color-mix(in oklab,var(--primary) 18%,var(--background)); }
+.partner-sign span { align-self:start; font-family:var(--font-ui); font-size:.75rem; color:var(--primary); }
+
+@media (max-width:900px) {
+  .section-heading-row { align-items:start; flex-direction:column; }
+  .mission-selector,.partners-layout { grid-template-columns:1fr; }
+  .mission-list { grid-template-columns:repeat(4,minmax(0,1fr)); grid-template-rows:auto; }
+  .mission-list button { display:flex; min-height:4.5rem; flex-direction:column; justify-content:center; gap:.15rem; padding:.6rem; text-align:center; }
+  .mission-list button > strong { font-size:1.15rem; }
+  .mission-list button:hover,.mission-list button:focus-visible,.mission-list button.is-active { transform:translateY(-.3rem); box-shadow:0 6px 0 var(--foreground); }
+}
+@media (max-width:560px) {
+  .about-type { font-size:1.55rem !important; }
+  .about-actions { justify-content:center; }
+  .about-round-link { width:8rem; height:8rem; font-size:.9rem; }
+  .about-round-link.secondary { width:7.3rem; height:7.3rem; }
+  .mission-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .mission-feature,.mission-feature-copy { min-height:25rem; }
+  .mission-feature-copy { padding:1.4rem; }
+  .ng-toolbar > p span { display:none; }
+  .ng-frame figcaption { align-items:start; flex-direction:column; gap:.2rem; }
+  .ng-frame figcaption span { text-align:left; }
+  .partner-board { grid-template-columns:1fr; }
+  .partner-sign:first-child { grid-column:auto; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .about-intro strong { width:auto; animation:none; border-right:0; white-space:normal; }
+  .mission-feature,.ng-frame,.ng-photo img { animation:none; transition:none; }
+}
