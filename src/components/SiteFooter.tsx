@@ -19,7 +19,7 @@ const links = [["The road", "#legacy"], ["Missions", "#missions"], ["Districts",
 
 export function SiteFooter() {
   return (
-    <footer id="footer" className="site-footer">
+    <footer id="footer" className="site-footer atmo atmo-strong">
       <div className="mx-auto max-w-[1480px] px-5 lg:px-10">
         <p className="section-kicker">Find the city</p>
         <h2 className="section-title">All roads lead to <span className="font-graffiti text-primary">IEM</span></h2>

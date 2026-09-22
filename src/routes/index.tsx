@@ -39,7 +39,7 @@ function Index() {
       <FloatingNav />
 
       <section id="top" className="hero relative flex min-h-[92svh] items-center border-b border-foreground/15 pt-16">
-        <img src={heroImage} alt="A neon-lit Kolkata-inspired city at dusk with a black sports car" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={heroImage} alt="A neon-lit Kolkata-inspired city at dusk with a black sports car" width={1920} height={1088} className="grade-photo absolute inset-0 h-full w-full object-cover" />
         <div className="hero-shade absolute inset-0" />
         <span className="scribble left-note hidden lg:block">HACK<br/>BUILD<br/>COLLAB<br/>REPEAT</span>
         <span className="scribble right-note hidden lg:block">GOOD IDEAS<br/>BAD SLEEP</span>
@@ -70,7 +70,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="legacy" className="road-texture py-24">
+      <section id="legacy" className="road-texture atmo atmo-soft py-24">
         <div className="mx-auto max-w-[1480px] px-5 lg:px-10">
           <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div><p className="section-kicker">Mission select</p><h2 className="section-title">The road to <span className="font-graffiti text-primary">2027</span></h2></div>
@@ -94,14 +94,14 @@ function Index() {
         </div>
       </section>
 
-      <section id="missions" className="mission-zone border-y border-foreground/15 py-24">
+      <section id="missions" className="mission-zone atmo atmo-med border-y border-foreground/15 py-24">
         <div className="mx-auto max-w-[1480px] px-5 lg:px-10">
           <div className="section-heading-row"><div><p className="section-kicker">Choose your</p><h2 className="section-title">Mission</h2></div><p>Four routes. One city. Pick the move that starts your story.</p></div>
           <MissionSelector />
         </div>
       </section>
 
-      <section id="tracks" className="map-grid py-24">
+      <section id="tracks" className="map-grid atmo atmo-soft py-24">
         <div className="mx-auto max-w-[1480px] px-5 lg:px-10"><p className="section-kicker">Explore the map</p><h2 className="section-title">City districts</h2>
           <div className="mt-12"><DistrictCarousel /></div>
         </div>
@@ -113,15 +113,15 @@ function Index() {
         </div>
       </section>
 
-      <section className="night-section py-24">
+      <section className="night-section atmo atmo-soft py-24">
         <div className="mx-auto max-w-[1480px] px-5 lg:px-10"><div className="section-heading-row"><div><p className="section-kicker">Evidence archive</p><h2 className="section-title">The city never sleeps</h2></div><p>Seven frames from the streets, screens, and stages that keep DIVERSiON awake.</p></div>
           <NightGallery />
         </div>
       </section>
 
-      <section className="partners-section border-y border-foreground/15 py-20"><div className="mx-auto max-w-[1480px] px-5 lg:px-10"><div className="partners-layout"><div><p className="section-kicker">The people who build the city</p><h2 className="section-title">Partners</h2><p className="partners-copy">Put your brand where the next generation is building. Support ambitious teams and be part of Kolkata's biggest maker night.</p><Button asChild variant="city" size="lg" className="mt-8"><a href="mailto:hello@diversion.tech?subject=Partner%20with%20DIVERSiON%202027">Apply now to be a partner <Handshake /></a></Button></div><div className="partner-board">{['TITLE PARTNER','TECH PARTNER','COMMUNITY','PLATFORM','ECOSYSTEM'].map((x,i)=><div key={x} className="partner-sign"><span>0{i+1}</span>{x}</div>)}</div></div></div></section>
+      <section className="partners-section atmo atmo-med border-y border-foreground/15 py-20"><div className="mx-auto max-w-[1480px] px-5 lg:px-10"><div className="partners-layout"><div><p className="section-kicker">The people who build the city</p><h2 className="section-title">Partners</h2><p className="partners-copy">Put your brand where the next generation is building. Support ambitious teams and be part of Kolkata's biggest maker night.</p><Button asChild variant="city" size="lg" className="mt-8"><a href="mailto:hello@diversion.tech?subject=Partner%20with%20DIVERSiON%202027">Apply now to be a partner <Handshake /></a></Button></div><div className="partner-board">{['TITLE PARTNER','TECH PARTNER','COMMUNITY','PLATFORM','ECOSYSTEM'].map((x,i)=><div key={x} className="partner-sign"><span>0{i+1}</span>{x}</div>)}</div></div></div></section>
 
-      <section id="faq" className="wall-texture py-24"><div className="mx-auto grid max-w-[1180px] gap-10 px-5 md:grid-cols-[.8fr_1.2fr]"><div><p className="section-kicker">Ask the city</p><h2 className="section-title">Street questions</h2><p className="mt-5 font-graffiti text-2xl text-primary">No gatekeeping.</p></div><Accordion type="single" collapsible className="border-t border-foreground/30">{[
+      <section id="faq" className="wall-texture atmo atmo-soft py-24"><div className="mx-auto grid max-w-[1180px] gap-10 px-5 md:grid-cols-[.8fr_1.2fr]"><div><p className="section-kicker">Ask the city</p><h2 className="section-title">Street questions</h2><p className="mt-5 font-graffiti text-2xl text-primary">No gatekeeping.</p></div><Accordion type="single" collapsible className="border-t border-foreground/30">{[
         ['Who can join?','Students, makers, designers, and developers ready to build bold ideas together.'],['Where is it?','DIVERSiON 2027 takes place at the IEM Gurukul Building, Sector V, Salt Lake, Kolkata. All roads lead there.'],['How much does it cost?','Registration details and participation terms will be announced with the official launch.'],['What do I need to build?','Bring your curiosity and your crew. Challenges, tracks, and submission rules arrive before the event.']
       ].map(([q,a], index)=><AccordionItem key={q} value={`question-${index}`}><AccordionTrigger className="font-display text-xl uppercase no-underline hover:text-primary hover:no-underline">{q}</AccordionTrigger><AccordionContent className="font-ui text-base text-foreground/65">{a}</AccordionContent></AccordionItem>)}</Accordion></div></section>
 

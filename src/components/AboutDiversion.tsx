@@ -8,7 +8,7 @@ export function AboutDiversion() {
   return (
     <article className="about" aria-labelledby="about-title">
       <div className="about-poster">
-        <img src={cityImage} alt="" className="about-poster-img" width={1600} height={1008} loading="lazy" />
+        <img src={cityImage} alt="" className="about-poster-img grade-photo" width={1600} height={1008} loading="lazy" />
         <div className="about-poster-shade" />
         <p className="about-eyebrow">IEM ACM presents</p>
         <h3 id="about-title" className="about-title">

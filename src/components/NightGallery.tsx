@@ -80,7 +80,7 @@ export function NightGallery() {
           {frames.map((frame, frameIndex) => (
             <CarouselItem key={frame.title} className="basis-[88%] pl-5 sm:basis-[64%] lg:basis-[44%]">
               <figure className={frameIndex === index ? "ng-frame is-current" : "ng-frame"}>
-                <div className="ng-photo"><img src={frame.image} alt={frame.alt} width={1600} height={1008} loading="lazy" /></div>
+                <div className="ng-photo"><img src={frame.image} alt={frame.alt} width={1600} height={1008} loading="lazy" className="grade-photo" /></div>
                 <figcaption><strong>{frame.title}</strong><span>{frame.note}</span></figcaption>
               </figure>
             </CarouselItem>

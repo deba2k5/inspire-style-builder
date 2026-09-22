@@ -50,7 +50,7 @@ export function MissionSelector() {
           hidden={active !== index}
           className="mission-feature"
         >
-          <img src={mission.image} alt="" width={1600} height={1008} loading="lazy" />
+          <img src={mission.image} alt="" width={1600} height={1008} loading="lazy" className="grade-photo" />
           <div className="mission-feature-shade" />
           <div className="mission-feature-copy">
             <p>Mission {mission.number} · Ready</p>
